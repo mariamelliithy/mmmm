@@ -1,0 +1,194 @@
+/* border-box & box-sizing */
+
+/* .div1{
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+}
+.div2{
+    width: 300px;
+    height: 100px;
+    border: 1px solid red;
+    padding: 50px;
+    box-sizing: border-box; 
+}  */
+/* this line above makes width=>250px and padding=>50px so the total width with padding=>300px */
+/* before this line the width=>300px as it initialized and padding=>50px so the total width with padding=>350px 
+and this happen when => box-sizing: content-box; => (this is the default)*/
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+/* grid-template-columns => Number of colums in => (px, %, auto, repeat, mix, fraction)
+grid-template-rows => Number of height in =>(px, %, Auto, repeat,fraction) 
+gap=> [Row gap], [column gap]*/
+/* MIX => grid-template-columns: 100px repeat(4, 50px) 25% auto ; */
+/* fraction is greedy auto is shay */
+
+/* .parent{
+    background-color: #eee;
+    padding: 20px;
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px auto 100px;
+    row-gap: 10px;
+    column-gap: 10px;
+    gap: 3px 3px;
+}
+.parent div {
+    background-color: brown;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  } */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* .parent{
+    background-color: #eee;
+    padding: 20px;
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 20% auto 20%;
+    grid-template-areas: " logo logo logo nav nav nav nav nav nav nav"
+    "content content content content content content content content content content"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+.parent div{
+    text-align: center;
+}
+.logo{
+    grid-area: logo;
+    background-color: blueviolet;
+}
+.nav{
+    grid-area: nav;
+    background-color: aqua;
+}
+.content{
+    grid-area: content;
+    background-color: brown;
+}
+.footer{
+    grid-area: footer;
+    background-color: cadetblue;
+} */
+/* ----------------------------------------------------------------------------------------------------------- */
+
+
+
+/* Grid child grid-row & grid-column */
+
+
+/* .parent{
+    background-color: #eee;
+    padding: 20px;
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    gap: 3px 3px;
+}
+.parent div{
+    background-color: brown;
+    padding: 20px;
+    color: white;
+}
+.header{
+    grid-column: 1/11;
+}
+.nav{
+    grid-column: 1/ span 3;
+    grid-row: 2/4;
+}
+.content{
+    grid-column: 4/11;
+}
+.footer{
+    grid-column: 4/11;
+} */
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+
+/* --- */
+
+/* -------------------------------------------------------------------------------------------- */
+
+
+
+/* Variable declarations */ 
+/* :root {
+    --blue:red;
+    --white: #ffffff; 
+  }
+  
+.container {
+    --fontsize: 25px;
+  }
+  
+body {
+    background-color: var(--blue);
+  }
+  
+h2 {
+    border-bottom: 2px solid var(--blue);
+  }
+  
+.container {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 15px;
+    font-size: var(--fontsize);
+  }
+  
+@media screen and (min-width: 450px) {
+    .container {
+      --fontsize: 50px;
+    }
+  } */
+
+  /* ---------------------------------------------------------------------------------------------------  */
+
+
+/* Media Queries And Responsive Designs */
+/* .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    .box {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    }
+    
+    @media (max-width: 500px) {
+    .box {
+    width: 100%;
+    }
+    }
+    @media (min-width: 501px) and (max-width: 800px) {
+    .box {
+    width: 50%;
+    }
+    }
+    
+    @media (min-width: 801px) {
+    .box {
+    width: 25%;
+    }
+    } */
+    
